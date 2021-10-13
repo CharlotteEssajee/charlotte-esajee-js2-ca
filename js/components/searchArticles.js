@@ -1,6 +1,6 @@
 import { getArticles } from "../index.js";
 
-export function searchArticles(article) {
+export function searchArticles(items) {
   const search = document.querySelector(".search");
 
   search.onkeyup = function (event) {
@@ -8,7 +8,7 @@ export function searchArticles(article) {
 
     // filter by title
     const searchValue = event.target.value.trim().toLowerCase();
-    const filteredArticles = article.filter(function (article) {
+    const filteredArticles = items.filter(function (article) {
       if (article.title.toLowerCase().startsWith(searchValue)) {
         return true;
       }

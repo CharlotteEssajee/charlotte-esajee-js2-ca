@@ -16,7 +16,7 @@ export async function getArticles() {
     const json = await response.json();
 
     // console.log(json);
-    const items = json;
+    const articles = json;
 
     json.forEach((article) => {
       let cssClass = "far";
@@ -43,12 +43,13 @@ export async function getArticles() {
                                                 <h4>${article.title}</h4>
                                                 <p class="card-author">${article.author}</p>
                                                 <p class="card-summary">${article.summary}</p>
+                                                <a href="edit.html?id=${article.id}" class="btn btn-primary">View Product</a>
                                             </div>
                                         </div>
                                     </div>`;
     });
 
-    searchArticles();
+    searchArticles(articles);
 
     const favButtons = document.querySelectorAll(".article i");
 

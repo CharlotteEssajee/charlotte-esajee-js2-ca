@@ -9,10 +9,16 @@
 :root {
   --text-color: #333;
   --primary-color: #dc3545;
+  --primary-hover: #aa2835;
 }
 
 h1 {
   margin: 1em 0;
+}
+
+.btn-primary:hover,
+#logout:hover {
+  background-color: var(--primary-hover);
 }
 
 /* loading indicator */
@@ -111,9 +117,61 @@ i {
   color: var(--primary-color);
 }
 
+.btn-primary {
+  background: var(--primary-color);
+  border: var(--primary-color);
+}
+
 /* faves */
 button {
   padding: 5px 10px;
   margin: 0 0 20px 16px;
   border-radius: 0.8em;
+}
+
+/* login */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+label {
+  display: block;
+}
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: lightgray;
+  padding: 40px;
+  border-radius: 0.8em;
+}
+
+form > div {
+  margin-bottom: 1rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.4rem;
+}
+
+.login-btn {
+  height: 40px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* logout */
+#logout {
+  width: auto;
+  height: 30px;
+  background: var(--primary-color);
+  font-size: 10px;
+  margin-top: 16px;
+  border: var(--primary-color);
+  color: white;
 }
