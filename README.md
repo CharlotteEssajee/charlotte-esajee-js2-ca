@@ -1,1 +1,1 @@
-# charlotte-esajee-js2-ca
+# Building a favourites page with localStorage

@@ -1,4 +1,4 @@
-//import { getExistingFavs } from "../utils/favFunctions";
+import { getExistingFavs } from "../utils/favFunctions.js";
 
 export default function clearButton() {
   const clearFaves = document.querySelector("#clear");
@@ -6,8 +6,8 @@ export default function clearButton() {
   clearFaves.addEventListener("click", clearList);
 
   function clearList() {
-    localStorage.clear();
+    localStorage.clear("favourites");
 
-    //getExistingFavs([]);
+    getExistingFavs([]);
   }
 }
